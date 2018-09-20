@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MySQL数据库操作 | YunXi&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="YunXi,YunXi's blog" />
+  
+  <meta name="description" content="##用户管理： 　　1、新建用户： 　　　　&amp;gt;CREATE USER name IDENTIFIED BY ‘ssapdrow’; 　　2、更改密码：">
+<meta name="keywords" content="操作大全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据库操作">
+<meta property="og:url" content="https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/index.html">
+<meta property="og:site_name" content="YunXi&#39;s blog">
+<meta property="og:description" content="##用户管理： 　　1、新建用户： 　　　　&amp;gt;CREATE USER name IDENTIFIED BY ‘ssapdrow’; 　　2、更改密码：">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-19T12:45:48.150Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL数据库操作">
+<meta name="twitter:description" content="##用户管理： 　　1、新建用户： 　　　　&amp;gt;CREATE USER name IDENTIFIED BY ‘ssapdrow’; 　　2、更改密码：">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/blog/" class="left">
+                    <span class="site-title">YunXi&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/blog/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/blog/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/blog/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/blog/">
+                    <img src="/blog/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        YunXi&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        Whatever is worth doing is worth doing well
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Github" target="_blank" href="//github.com/YunXi97">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/6501514630/profile?topnav=1&wvr=6">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="//https://user.qzone.qq.com/1032406383/main">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-MySQL操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      MySQL数据库操作
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/blog/categories/MySQL/">MySQL</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-09-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>##用户管理：</p>
+<p>　　1、新建用户：</p>
+<p>　　　　&gt;CREATE USER name IDENTIFIED BY ‘ssapdrow’;</p>
+<p>　　2、更改密码：</p>
+<a id="more"></a>
+<p>　　　　&gt;SET PASSWORD FOR name=PASSWORD(‘fdddfd’);
+　　　　</p>
+<p>　　3、权限管理</p>
+<p>　　　　&gt;SHOW GRANTS FOR name; //查看name用户权限</p>
+<p>　　　　&gt;GRANT SELECT ON db_name.* TO name;　　　　//给name用户db_name数据库的所有权限</p>
+<p>　　　　&gt;REVOKE SELECT ON db_name.* TO name;　　　　//GRANT的反操作，去除权限；</p>
+<p>##一、数据库操作：　</p>
+<p>　　1、查看数据库：</p>
+<p>　　　　&gt;SHOW DATABASES;</p>
+<p>　　2、创建数据库：</p>
+<p>　　　　&gt;CREATE DATABASE db_name;　　//db_name为数据库名</p>
+<p>　　3、使用数据库：</p>
+<p>　　　　&gt;USE db_name;</p>
+<p>　　4、删除数据库：</p>
+<p>　　　　&gt;DROP DATABASE db_name;</p>
+<p>##二、创建表：</p>
+<p>　　1、创建表：</p>
+<p>　　　　&gt;CREATE TABLE table_name(</p>
+<p>　　　　&gt;id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,　　　　//id值，无符号、非空、递增——唯一性，可做主键。</p>
+<p>　　　　&gt;name VARCHAR(60) NOT NULL</p>
+<p>　　　　&gt;score TINYINT UNSIGNED NOT NULL DEFAULT 0,　　　　//设置默认列值</p>
+<p>　　　　&gt;PRIMARY KEY(id)</p>
+<p>　　　　&gt;)ENGINE=InnoDB　　　　//设置表的存储引擎，一般常用InnoDB和MyISAM；InnoDB可靠，支持事务；MyISAM高效不支持全文检索</p>
+<p>　　　　&gt;DEFAULT charset=utf8;　　//设置默认的编码，防止数据库中文乱码</p>
+<p>　　　　如果有条件的创建数据表还可以使用 &gt;CREATE TABLE IF NOT EXISTS tb_name(……..</p>
+<p>　　2、复制表：</p>
+<p>　　　　&gt;CREATE TABLE tb_name2 SELECT * FROM tb_name;</p>
+<p>　　　　或者部分复制：</p>
+<p>　　　　&gt;CREATE TABLE tb_name2 SELECT id,name FROM tb_name;</p>
+<p>　　3、创建临时表：</p>
+<p>　　　　&gt;CREATE TEMPORARY TABLE tb_name(这里和创建普通表一样);</p>
+<p>　　4、查看数据库中可用的表：</p>
+<p>　　　　&gt;SHOW TABLES;</p>
+<p>　　5、查看表的结构：</p>
+<p>　　　　&gt;DESCRIBE tb_name;</p>
+<p>　　　　也可以使用：</p>
+<p>　　　　&gt;SHOW COLUMNS in tb_name; 　　　　//from也可以</p>
+<p>　　6、删除表：</p>
+<p>　　　　&gt;DROP [ TEMPORARY ] TABLE [ IF EXISTS ] tb_name[ ,tb_name2…….];</p>
+<p>　　　　实例：</p>
+<p>　　　　&gt;DROP TABLE IF EXISTS tb_name;</p>
+<p>　　7、表重命名：</p>
+<p>　　　　&gt;RENAME TABLE name_old TO name_new;</p>
+<p>　　　　还可以使用：</p>
+<p>　　　　&gt;ALTER TABLE name_old RENAME name_new;</p>
+<p>##三、修改表：</p>
+<p>　　1、更改表结构：</p>
+<p>　　　　&gt;ALTER TABLE tb_name ADD[CHANGE,RENAME,DROP] …要更改的内容…</p>
+<p>　　　　实例：</p>
+<p>　　　　&gt;ALTER TABLE tb_name ADD COLUMN address varchar(80) NOT NULL;</p>
+<p>　　　　&gt;ALTER TABLE tb_name DROP address;</p>
+<p>　　　　&gt;ALTER TABLE tb_name CHANGE score score SMALLINT(4) NOT NULL;</p>
+<p>##四、插入数据：</p>
+<p>　　1、插入数据：</p>
+<p>　　　　&gt;INSERT INTO tb_name(id,name,score)VALUES(NULL,’张三’,140),(NULL,’张四’,178),(NULL,’张五’,134);</p>
+<p>　　　　这里的插入多条数据直接在后边加上逗号，直接写入插入的数据即可；主键id是自增的列，可以不用写。</p>
+<p>　　2、插入检索出来的数据：</p>
+<p>　　　　&gt;INSERT INTO tb_name(name,score) SELECT name,score FROM tb_name2;</p>
+<p>##五、更新数据：</p>
+<p>　　1、指定更新数据：</p>
+<p>　　　　&gt;UPDATE tb_name SET score=189 WHERE id=2;</p>
+<p>　　　　&gt;UPDATE tablename SET columnName=NewValue [ WHERE condition ]</p>
+<p>##六、删除数据：</p>
+<p>　　1、删除数据：</p>
+<p>　　　　&gt;DELETE FROM tb_name WHERE id=3;</p>
+<p>##七、条件控制：</p>
+<p>　　1、WHERE 语句：</p>
+<p>　　　　&gt;SELECT * FROM tb_name WHERE id=3;</p>
+<p>　　2、HAVING 语句：</p>
+<p>　　　　&gt;SELECT <em> FROM tb_name GROUP BY score HAVING count(</em>)&gt;2</p>
+<p>　　3、相关条件控制符：</p>
+<p>　　　　=、&gt;、&lt;、&lt;&gt;、IN(1,2,3……)、BETWEEN a AND b、NOT</p>
+<p>　　　　AND 、OR</p>
+<p>　　　　Linke()用法中 % 为匹配任意、 _ 匹配一个字符（可以是汉字）</p>
+<p>　　　　IS NULL 空值检测</p>
+<p>##八、MySQL的正则表达式：</p>
+<p>　　1、Mysql支持REGEXP的正则表达式：</p>
+<p>　　　　&gt;SELECT * FROM tb_name WHERE name REGEXP ‘^[A-D]’ //找出以A-D 为开头的name</p>
+<p>　　2、特殊字符需要转义。</p>
+<p>##九、MySQL的一些函数：</p>
+<p>　　1、字符串链接——CONCAT()</p>
+<p>　　　　&gt;SELECT CONCAT(name,’=&gt;’,score) FROM tb_name</p>
+<p>　　2、数学函数：</p>
+<p>　　　　AVG、SUM、MAX、MIN、COUNT；</p>
+<p>　　3、文本处理函数：</p>
+<p>　　　　TRIM、LOCATE、UPPER、LOWER、SUBSTRING</p>
+<p>　　4、运算符：</p>
+<p>　　　　+、-、*、\</p>
+<p>　　5、时间函数：</p>
+<p>　　　　DATE()、CURTIME()、DAY()、YEAR()、NOW()…..</p>
+<p>##十、分组查询：</p>
+<p>　　1、分组查询可以按照指定的列进行分组：</p>
+<p>　　　　&gt;SELECT COUNT() FROM tb_name GROUP BY score HAVING COUNT()&gt;1;</p>
+<p>　　2、条件使用Having；</p>
+<p>　　3、ORDER BY 排序：</p>
+<p>　　　　ORDER BY DESC|ASC　　　　=&gt;按数据的降序和升序排列</p>
+<p>##十一、UNION规则——可以执行两个语句（可以去除重复行）</p>
+<p>##十二、全文检索——MATCH和AGAINST</p>
+<p>　　1、SELECT MATCH(note_text)AGAINST(‘PICASO’) FROM tb_name;</p>
+<p>　　2、InnoDB引擎不支持全文检索，MyISAM可以；</p>
+<p>##十三、视图</p>
+<p>　　1、创建视图</p>
+<p>　　　　&gt;CREATE VIEW name AS SELECT * FROM tb_name WHERE ~~ ORDER BY ~~;</p>
+<p>　　2、视图的特殊作用：</p>
+<p>　　　　　　a、简化表之间的联结（把联结写在select中）；</p>
+<p>　　　　　　b、重新格式化输出检索的数据（TRIM，CONCAT等函数）；</p>
+<p>　　　　　　c、过滤不想要的数据（select部分）</p>
+<p>　　　　　　d、使用视图计算字段值，如汇总这样的值。</p>
+<p>##十四、使用存储过程：</p>
+<p>　　个人理解，存储过程就是一个自定义函数，有局部变量参数，可传入参数，可以返回值，不过这语法够呆滞的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">　　1、创建存储过程：</span><br><span class="line"></span><br><span class="line">　　　　&gt;CREATE PROCEDURE pro(</span><br><span class="line"></span><br><span class="line">　　　　&gt;IN num INT,OUT total INT)</span><br><span class="line"></span><br><span class="line">　　　　&gt;BEGIN</span><br><span class="line"></span><br><span class="line">　　　　&gt;SELECT SUM(score) INTO total FROM tb_name WHERE id=num;</span><br><span class="line"></span><br><span class="line">　　　　&gt;END;</span><br><span class="line"></span><br><span class="line">　　　*这里的 IN (传递一个值给存储过程)，OUT（从存储过程传出一个值），INOUT（对存储过程传入、传出），INTO（保存变量）</span><br><span class="line"></span><br><span class="line">　　2、调用存储过程：</span><br><span class="line"></span><br><span class="line">　　　　&gt;CALL pro(13,@total)　　　　　　//这里的存储过程两个变量，一个是IN一个是OUT，这里的OUT也是需要写上的，不写会出错</span><br><span class="line"></span><br><span class="line">　　　　&gt;SELECT @total　　　　　　　　　//这里就可以看到结果了；</span><br><span class="line"></span><br><span class="line">　　3、存储过程的其他操作：</span><br><span class="line"></span><br><span class="line">　　　　&gt;SHOW PROCEDURE STATUS;　　　　　　//显示当期的存储过程</span><br><span class="line"></span><br><span class="line">　　　　&gt;DROP PROCEDURE pro;　　　　　　　　　//删除指定存储过程</span><br><span class="line"></span><br><span class="line">##十五、使用游标：</span><br><span class="line"></span><br><span class="line">　　对这个理解不是很懂，朋友多多指点哦</span><br></pre></td></tr></table></figure></p>
+<p>　　　1、游标的操作</p>
+<p>　　　　&gt;CREATE PROCEDURE pro()</p>
+<p>　　　　&gt;BEGIN</p>
+<p>　　　　&gt;DECLARE ordername CURSOR FOR</p>
+<p>　　　　&gt;SELECT order_num FROM orders;</p>
+<p>　　　　&gt;END;</p>
+<p>　　　　&gt;OPEN ordername;　　　　//打开游标</p>
+<p>　　　　&gt;CLOSE ordername;　　　　//关闭游标</p>
+<p>##十六、触发器：</p>
+<p>　　触发器是指在进行某项指定操作时，触发触发器内指定的操作；</p>
+<p>　　1、支持触发器的语句有DELETE、INSERT、UPDATE,其他均不支持</p>
+<p>　　2、创建触发器：</p>
+<p>　　　　&gt;CREATE TRIGGER trig AFTER INSERT ON ORDERS FOR EACH ROW SELECT NEW.orser_name;</p>
+<p>　　　　&gt;INSERT语句，触发语句，返回一个值</p>
+<p>　　3、删除触发器</p>
+<p>　　　　&gt;DROP TRIGGER trig;</p>
+<p>##十七、语法整理：</p>
+<p>　　1、ALTER TABLE（修改表）</p>
+<p>　　　　ALTER TABLE table_name</p>
+<p>　　　　(　　ADD　　　　column　　datatype 　　[ NULL | NOT NULL ]　　[ CONSTRAINTS ]</p>
+<p>　　　　　　 CHANGE　　column 　　datatype 　　COLUMNS　　[ NULL | NOT NULL ]　　 [ CONSTRAINTS ]</p>
+<p>　　　　　　 DROP　　　 column，</p>
+<p>　　　　　　　。。。。</p>
+<p>　　　　)</p>
+<p>　　2、COMMIT(处理事务)</p>
+<p>　　　　&gt;COMMIT;</p>
+<p>　　3、CREATE INDEX(在一个或多个列上创建索引)</p>
+<p>　　　　CREATE INDEX index_name ON tb_name (column [ ASC | DESC ] , …….);</p>
+<p>　　4、CREATE PROCEDURE (创建存储过程)</p>
+<p>　　　　CREATE PROCEDURE pro([ parameters ])</p>
+<p>　　　　BEGIN</p>
+<p>　　　　……..</p>
+<p>　　　　END</p>
+<p>　　5、CREATE TABLE(创建表)</p>
+<p>　　　　CREATE TABLE tb_name(</p>
+<p>　　　　column_name　　datetype　　[ NULL | NOT NULL ] 　　[ condtraints] ,</p>
+<p>　　　　column_name　　datetype　　[ NULL | NOT NULL ] 　　[ condtraints] ,</p>
+<p>　　　　…….</p>
+<p>　　　　PRIMARY KEY( column_name )</p>
+<p>　　　　)ENGINE=[ InnoDB | MyiSAM ]DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;</p>
+<p>　　6、CREATE USER(创建用户)</p>
+<p>　　　　CREATE USER user_name [ @hostname ] [ IDENTIFIED BY [ PASSWORD ] ‘pass_word’ ];</p>
+<p>　　7、CREATE VIEW （在一个或多个表上创建视图）</p>
+<p>　　　　CREATE [ OR REPLACE ] VIEW view_name AS SELECT。。。。。。</p>
+<p>　　8、DELETE (从表中删除一行或多行)</p>
+<p>　　　　DELETE FROM table_name [WHERE ……]</p>
+<p>　　9、DROP(永久删除数据库及对象，如视图、索引等)</p>
+<p>　　　　DROP DATEBASE | INDEX | PROCEDURE | TABLE | TRIGGER | USER | VIEW name</p>
+<p>　　10、INSERT （给表添加行）</p>
+<p>　　　　INSERT INTO tb_name [ ( columns,…… ) ] VALUES(value1,…………);</p>
+<p>　　　　使用SELECT值插入：</p>
+<p>　　　　INSERT INTO tb_name [ ( columns,…… ) ]</p>
+<p>　　　　SELECT columns , ……. FROM tb_name [ WHERE …… ] ;</p>
+<p>　　 11、ROLLBACK（撤销一个事务处理块）</p>
+<p>　　　　ROLLBACK [ TO savapointname ];</p>
+<p>　　 12、SAVEPOINT(为ROLLBACK设置保留点)</p>
+<p>　　　　SAVEPOINT sp1;</p>
+<p>　　 13、SELECT (检索数据，显示信息)</p>
+<p>　　　　SELECT column_name,…..FROM tb_name [ WHERE ] [ UNION ] [ RROUP BY ] [ HAVING ] [ ORDER BY ]</p>
+<p>　　14、START TRANSACTION (一个新的事务处理块的开始)</p>
+<p>　　　　START TRANSACTION</p>
+<p>　　 15、UPDATE(更新一个表中的一行或多行)</p>
+<p>　　　　UPDATE tb_name SET column=value,……[ where ]</p>
+<p>###【后记】MySQL数据库是一个十分轻便的数据库管理系统，相比大型的数据库管理系统如Oracle、MS-SQL ，MySQL更拥有轻便、灵活、开发速度快的特色，更适用于中小型数据的存储与架构。MySQL之所以能够被数以万计的网站采用，也是由此而来。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年09月19日 20:45</p>
+        <p>原始链接： <a class="post-url" href="/blog/2018/09/18/MySQL操作/" title="MySQL数据库操作">https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/</a></p>
+        <footer>
+            <a href="https://wuyunxi.gitee.io/blog">
+                <img src="/blog/images/logo.png" alt="YunXi">
+                YunXi
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/blog/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/blog/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/blog/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/blog/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/blog/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/&title=《MySQL数据库操作》 — YunXi's blog&pic=https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537369106291&di=25e9883983fc24080033b97bfe2513a5&imgtype=0&src=http%3A%2F%2Fwww.eeboard.com%2Fwp-content%2Fuploads%2F2015%2F02%2FMySQL.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/&title=《MySQL数据库操作》 — YunXi's blog&source=##用户管理：
+　　1、新建用户：
+　　　　&gt;CREATE USER name IDENTIFIED BY ‘ssapdrow’;
+　　2、更改密码：" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL数据库操作》 — YunXi's blog&url=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/&via=https://wuyunxi.gitee.io/blog" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://wuyunxi.gitee.io/blog/2018/09/18/MySQL操作/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/blog/tags/操作大全/" class="color5">操作大全</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/blog/2018/09/19/MySQL子查询/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          MySQL数据库操作
+        
+      </span>
+    </a>
+  
+  
+    <a href="/blog/2018/08/20/day04笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Java运算符</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 YunXi<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://wuyunxi.gitee.io/blog",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/blog/categories/Java基础/">Java基础</a><a class="category-link" href="/blog/categories/MySQL/">MySQL</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/blog/tags/java基础/" style="font-size: 10px;">java基础</a> <a href="/blog/tags/java运算符/" style="font-size: 10px;">java运算符</a> <a href="/blog/tags/java选择语句/" style="font-size: 10px;">java选择语句</a> <a href="/blog/tags/子查询/" style="font-size: 10px;">子查询</a> <a href="/blog/tags/循环语句/" style="font-size: 10px;">循环语句</a> <a href="/blog/tags/操作大全/" style="font-size: 10px;">操作大全</a> <a href="/blog/tags/方法/" style="font-size: 10px;">方法</a> <a href="/blog/tags/计算机基础知识/" style="font-size: 10px;">计算机基础知识</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/blog/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/blog/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/blog/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/blog/tags/java基础/" style="font-size: 10px;">java基础</a> <a href="/blog/tags/java运算符/" style="font-size: 10px;">java运算符</a> <a href="/blog/tags/java选择语句/" style="font-size: 10px;">java选择语句</a> <a href="/blog/tags/子查询/" style="font-size: 10px;">子查询</a> <a href="/blog/tags/循环语句/" style="font-size: 10px;">循环语句</a> <a href="/blog/tags/操作大全/" style="font-size: 10px;">操作大全</a> <a href="/blog/tags/方法/" style="font-size: 10px;">方法</a> <a href="/blog/tags/计算机基础知识/" style="font-size: 10px;">计算机基础知识</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/blog/js/search.js"></script>
+<script src="/blog/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/blog/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/blog/js/animate.js"></script>
+
+
+  <script src="/blog/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
