@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>YunXi&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="YunXi,YunXi's blog" />
+  
+  <meta name="description" content="###06.01_面向对象(面向对象思想概述)(了解)  A:面向过程思想概述 第一步 第二步    B:面向对象思想概述 找对象(第一步,第二步)    C:举例 买煎饼果子 洗衣服    D:面向对象思想特点 a:是一种更符合我们思想习惯的思想 b:可以将复杂的事情简单化 c:将我们从执行者变成了指挥者 角色发生了转换     E:面向对象开发 就是不断的创建对象，使用对象，指挥对象做事情。">
+<meta name="keywords" content="YunXi,YunXi&#39;s blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YunXi&#39;s blog">
+<meta property="og:url" content="https://yunxi97.github.io/2018/09/20/day06笔记/index.html">
+<meta property="og:site_name" content="YunXi&#39;s blog">
+<meta property="og:description" content="###06.01_面向对象(面向对象思想概述)(了解)  A:面向过程思想概述 第一步 第二步    B:面向对象思想概述 找对象(第一步,第二步)    C:举例 买煎饼果子 洗衣服    D:面向对象思想特点 a:是一种更符合我们思想习惯的思想 b:可以将复杂的事情简单化 c:将我们从执行者变成了指挥者 角色发生了转换     E:面向对象开发 就是不断的创建对象，使用对象，指挥对象做事情。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2016-10-25T11:11:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YunXi&#39;s blog">
+<meta name="twitter:description" content="###06.01_面向对象(面向对象思想概述)(了解)  A:面向过程思想概述 第一步 第二步    B:面向对象思想概述 找对象(第一步,第二步)    C:举例 买煎饼果子 洗衣服    D:面向对象思想特点 a:是一种更符合我们思想习惯的思想 b:可以将复杂的事情简单化 c:将我们从执行者变成了指挥者 角色发生了转换     E:面向对象开发 就是不断的创建对象，使用对象，指挥对象做事情。">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">YunXi&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        YunXi&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        Whatever is worth doing is worth doing well
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Github" target="_blank" href="//github.com/YunXi97">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/6501514630/profile?topnav=1&wvr=6">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="//https://user.qzone.qq.com/1032406383/main">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-day06笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>###06.01_面向对象(面向对象思想概述)(了解)</p>
+<ul>
+<li>A:面向过程思想概述<ul>
+<li>第一步</li>
+<li>第二步 </li>
+</ul>
+</li>
+<li>B:面向对象思想概述<ul>
+<li>找对象(第一步,第二步) </li>
+</ul>
+</li>
+<li>C:举例<ul>
+<li>买煎饼果子</li>
+<li>洗衣服 </li>
+</ul>
+</li>
+<li>D:面向对象思想特点<ul>
+<li>a:是一种更符合我们思想习惯的思想</li>
+<li>b:可以将复杂的事情简单化</li>
+<li>c:将我们从执行者变成了指挥者<ul>
+<li>角色发生了转换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>E:面向对象开发<ul>
+<li>就是不断的创建对象，使用对象，指挥对象做事情。</li>
+</ul>
+</li>
+<li>F:面向对象设计<ul>
+<li>其实就是在管理和维护对象之间的关系。</li>
+</ul>
+</li>
+<li>G:面向对象特征<ul>
+<li>封装(encapsulation)</li>
+<li>继承(inheritance)</li>
+<li>多态(polymorphism)</li>
+</ul>
+</li>
+</ul>
+<p>###06.02_面向对象(类与对象概述)(掌握)</p>
+<ul>
+<li>A:我们学习编程是为了什么<ul>
+<li>为了把我们日常生活中实物用学习语言描述出来</li>
+</ul>
+</li>
+<li>B:我们如何描述现实世界事物<ul>
+<li>属性    就是该事物的描述信息(事物身上的名词)</li>
+<li>行为    就是该事物能够做什么(事物身上的动词)</li>
+</ul>
+</li>
+<li>C:Java中最基本的单位是类,Java中用class描述事物也是如此<ul>
+<li>成员变量    就是事物的属性</li>
+<li>成员方法    就是事物的行为</li>
+</ul>
+</li>
+<li>D:定义类其实就是定义类的成员(成员变量和成员方法)<ul>
+<li>a:成员变量    和以前定义变量是一样的，只不过位置发生了改变。在类中，方法外。</li>
+<li>b:成员方法    和以前定义方法是一样的，只不过把static去掉，后面在详细讲解static的作用。</li>
+</ul>
+</li>
+<li>E:类和对象的概念<ul>
+<li>a:类：是一组相关的属性和行为的集合</li>
+<li>b:对象：是该类事物的具体体现</li>
+<li>c:举例：<ul>
+<li>类     学生</li>
+<li>对象    具体的某个学生就是一个对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>###06.03_面向对象(学生类的定义)(掌握)</p>
+<ul>
+<li>A:学生事物</li>
+<li>B:学生类</li>
+<li>C:案例演示<ul>
+<li>属性:姓名,年龄,性别</li>
+<li>行为:学习,睡觉</li>
+</ul>
+</li>
+</ul>
+<p>###06.04_面向对象(手机类的定义)(掌握)</p>
+<ul>
+<li>模仿学生类，让学生自己完成<ul>
+<li>属性:品牌(brand)价格(price)</li>
+<li>行为:打电话(call),发信息(sendMessage)玩游戏(playGame)</li>
+</ul>
+</li>
+</ul>
+<p>###06.05_面向对象(学生类的使用)(掌握)</p>
+<ul>
+<li>A:文件名问题<ul>
+<li>在一个java文件中写两个类：一个基本的类，一个测试类。</li>
+<li>建议：文件名称和测试类名称一致。</li>
+</ul>
+</li>
+<li>B:如何使用对象?<ul>
+<li>创建对象并使用</li>
+<li>格式：类名 对象名 = new 类名();</li>
+</ul>
+</li>
+<li>D:如何使用成员变量呢?<ul>
+<li>对象名.变量名</li>
+</ul>
+</li>
+<li>E:如何使用成员方法呢?<ul>
+<li>对象名.方法名(…)</li>
+</ul>
+</li>
+</ul>
+<p>###06.06_面向对象(手机类的使用)(掌握)</p>
+<ul>
+<li>A:学生自己完成<ul>
+<li>模仿学生类，让学生自己完成</li>
+</ul>
+</li>
+</ul>
+<p>###06.07_面向对象(一个对象的内存图)(掌握)</p>
+<ul>
+<li>A:画图演示<ul>
+<li>一个对象</li>
+</ul>
+</li>
+</ul>
+<p>###06.08_面向对象(二个对象的内存图)(了解)</p>
+<ul>
+<li>A:画图演示<ul>
+<li>二个不同的对象</li>
+</ul>
+</li>
+</ul>
+<p>###06.09_面向对象(三个引用两个对象的内存图)(了解)</p>
+<ul>
+<li>A:画图演示<ul>
+<li>三个引用，有两个对象的引用指向同一个地址</li>
+</ul>
+</li>
+</ul>
+<p>###06.10_面向对象(成员变量和局部变量的区别)(掌握)</p>
+<ul>
+<li>A:在类中的位置不同<ul>
+<li>成员变量：在类中方法外</li>
+<li>局部变量：在方法定义中或者方法声明上</li>
+</ul>
+</li>
+<li>B:在内存中的位置不同<ul>
+<li>成员变量：在堆内存(成员变量属于对象,对象进堆内存)</li>
+<li>局部变量：在栈内存(局部变量属于方法,方法进栈内存)</li>
+</ul>
+</li>
+<li>C:生命周期不同<ul>
+<li>成员变量：随着对象的创建而存在，随着对象的消失而消失</li>
+<li>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
+</ul>
+</li>
+<li><p>D:初始化值不同</p>
+<ul>
+<li>成员变量：有默认初始化值</li>
+<li>局部变量：没有默认初始化值，必须定义，赋值，然后才能使用。</li>
+</ul>
+</li>
+<li><p>注意事项：</p>
+<ul>
+<li>局部变量名称可以和成员变量名称一样，在方法中使用的时候，采用的是就近原则。</li>
+<li>基本数据类型变量包括哪些:byte,short,int,long,float,double,boolean,char</li>
+<li>引用数据类型变量包括哪些:数组,类,接口,枚举</li>
+</ul>
+</li>
+</ul>
+<p>###06.11_面向对象(方法的形式参数是类名的时候如何调用)(掌握)</p>
+<ul>
+<li>A:方法的参数是类名public void print(Student s){}//print(new Student());<ul>
+<li>如果你看到了一个方法的形式参数是一个类类型(引用类型)，这里其实需要的是该类的对象。</li>
+</ul>
+</li>
+</ul>
+<p>###06.12_面向对象(匿名对象的概述和应用)(掌握)</p>
+<ul>
+<li>A:什么是匿名对象<ul>
+<li>没有名字的对象 </li>
+</ul>
+</li>
+<li>B:匿名对象应用场景<ul>
+<li>a:调用方法，仅仅只调用一次的时候。<ul>
+<li>那么，这种匿名调用有什么好处吗?<ul>
+<li>节省代码 </li>
+</ul>
+</li>
+<li>注意：调用多次的时候，不适合。匿名对象调用完毕就是垃圾。可以被垃圾回收器回收。</li>
+</ul>
+</li>
+<li>b:匿名对象可以作为实际参数传递</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>匿名对象应用场景</li>
+</ul>
+</li>
+</ul>
+<p>###06.13_面向对象(封装的概述)(掌握)</p>
+<ul>
+<li><p>A:封装概述</p>
+<ul>
+<li>是指隐藏对象的属性和实现细节，仅对外提供公共访问方式。</li>
+</ul>
+</li>
+<li><p>B:封装好处</p>
+<ul>
+<li>隐藏实现细节，提供公共的访问方式</li>
+<li>提高了代码的复用性</li>
+<li>提高安全性。</li>
+</ul>
+</li>
+<li>C:封装原则<ul>
+<li>将不需要对外提供的内容都隐藏起来。</li>
+<li>把属性隐藏，提供公共方法对其访问。</li>
+</ul>
+</li>
+</ul>
+<p>###06.14_面向对象(private关键字的概述和特点)(掌握)</p>
+<ul>
+<li>A:人类赋值年龄的问题</li>
+<li>B:private关键字特点<ul>
+<li>a:是一个权限修饰符</li>
+<li>b:可以修饰成员变量和成员方法</li>
+<li>c:被其修饰的成员只能在本类中被访问</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>封装和private的应用：</li>
+<li>A:把成员变量用private修饰</li>
+<li>B:提供对应的getXxx()和setXxx()方法</li>
+<li>private仅仅是封装的一种体现形式,不能说封装就是私有</li>
+</ul>
+</li>
+</ul>
+<p>###06.15_面向对象(this关键字的概述和应用)(掌握)</p>
+<ul>
+<li>A:this关键字特点<ul>
+<li>代表当前对象的引用 </li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>this的应用场景</li>
+<li>用来区分成员变量和局部变量重名</li>
+</ul>
+</li>
+</ul>
+<p>###06.16_面向对象(手机类代码及其测试)(掌握)</p>
+<ul>
+<li><p>A:学生练习</p>
+<ul>
+<li><p>请把手机类写成一个标准类，然后创建对象测试功能。</p>
+<pre><code>class Demo2_Phone {
+    public static void main(String[] args) {
+        Phone p1 = new Phone();
+        p1.setBrand(&quot;三星&quot;);
+        p1.setPrice(5288);
+
+        System.out.println(p1.getBrand() + &quot;...&quot; + p1.getPrice());
+        p1.call();
+        p1.sendMessage();
+        p1.playGame();
+    }
+}
+/*
+手机类
+    属性:品牌brand,价格price
+    行为:打电话call,发短信sendMessage,玩游戏,playGame
+*/
+class Phone {                                //java bean
+    private String brand;                    //品牌
+    private int price;                        //价格
+
+    public void setBrand(String brand) {    //设置品牌
+        this.brand = brand;
+    }
+
+    public String getBrand() {                //获取品牌
+        return this.brand;                    //this.可以省略,你不加系统会默认给你加
+    }
+
+    public void setPrice(int price) {        //设置价格
+        this.price = price;
+    }
+
+    public int getPrice() {                    //获取价格
+        return price;
+    }
+
+    public void call() {                    //打电话
+        System.out.println(&quot;打电话&quot;);
+    }
+
+    public void sendMessage() {                //发短信
+        System.out.println(&quot;发短信&quot;);
+    }
+
+    public void playGame() {                //玩游戏
+        System.out.println(&quot;玩游戏&quot;);
+    }
+}
+</code></pre><p>###06.17_day06总结</p>
+</li>
+</ul>
+</li>
+<li>把今天的知识点总结一遍。</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2016年10月25日 19:11</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/20/day06笔记/" title="">https://yunxi97.github.io/2018/09/20/day06笔记/</a></p>
+        <footer>
+            <a href="https://yunxi97.github.io">
+                <img src="/images/logo.png" alt="YunXi">
+                YunXi
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://yunxi97.github.io/2018/09/20/day06笔记/&title=YunXi's blog&pic=https://yunxi97.github.ioimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yunxi97.github.io/2018/09/20/day06笔记/&title=YunXi's blog&source=Whatever is worth doing is worth doing well" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://yunxi97.github.io/2018/09/20/day06笔记/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=YunXi's blog&url=https://yunxi97.github.io/2018/09/20/day06笔记/&via=https://yunxi97.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://yunxi97.github.io/2018/09/20/day06笔记/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://yunxi97.github.io/2018/09/20/day06笔记/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/19/MySQL子查询/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MySQL数据库操作</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 YunXi<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://yunxi97.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Java基础/">Java基础</a><a class="category-link" href="/categories/MySQL/">MySQL</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/java基础/" style="font-size: 10px;">java基础</a> <a href="/tags/java运算符/" style="font-size: 10px;">java运算符</a> <a href="/tags/java选择语句/" style="font-size: 10px;">java选择语句</a> <a href="/tags/子查询/" style="font-size: 10px;">子查询</a> <a href="/tags/循环语句/" style="font-size: 10px;">循环语句</a> <a href="/tags/操作大全/" style="font-size: 10px;">操作大全</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/计算机基础知识/" style="font-size: 10px;">计算机基础知识</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/java基础/" style="font-size: 10px;">java基础</a> <a href="/tags/java运算符/" style="font-size: 10px;">java运算符</a> <a href="/tags/java选择语句/" style="font-size: 10px;">java选择语句</a> <a href="/tags/子查询/" style="font-size: 10px;">子查询</a> <a href="/tags/循环语句/" style="font-size: 10px;">循环语句</a> <a href="/tags/操作大全/" style="font-size: 10px;">操作大全</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/计算机基础知识/" style="font-size: 10px;">计算机基础知识</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
